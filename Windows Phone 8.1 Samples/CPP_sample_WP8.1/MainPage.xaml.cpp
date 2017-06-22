@@ -38,7 +38,7 @@ MainPage::MainPage()
 void CPP_sample_WP8_1::MainPage::OnOnAdPlayableChanged(Platform::Object ^sender, VungleSDK::AdPlayableEventArgs ^args)
 {
 	//Run asynchronously on the UI thread
-	CoreApplication::MainView->Dispatcher->RunAsync(Windows::UI::Core::CoreDispatcherPriority::Normal,
+	this->Dispatcher->RunAsync(Windows::UI::Core::CoreDispatcherPriority::Normal,
 		ref new Windows::UI::Core::DispatchedHandler(
 			[this, args]
 	{
